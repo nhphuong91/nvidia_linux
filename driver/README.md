@@ -3,7 +3,7 @@ Source https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#dri
 &
 https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html
 
-Download http://developer.nvidia.com/cuda-downloads
+Download https://www.nvidia.com/Download/index.aspx
 
 ## Ubuntu 18.04
 ### Method 1 (easiest)
