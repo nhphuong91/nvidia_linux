@@ -33,6 +33,11 @@ _ Create a file at /etc/modprobe.d/blacklist-nouveau.conf with the following con
 blacklist nouveau
 options nouveau modeset=0
 ```
+Quick cmd
+```sh
+sudo bash -c "echo blacklist nouveau > /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
+sudo bash -c "echo options nouveau modeset=0 >> /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
+```
 _ Regenerate the kernel initramfs:
 ```sh
 sudo update-initramfs -u
