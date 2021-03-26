@@ -130,7 +130,19 @@ Step 1: Download & Calculate the MD5 checksum of the downloaded file
 md5sum <driver_file>
 ```
 
-Step 2: Go to the directory which contains downloaded drivers & run the *.run file (with options if necessary. Ex: `--dkms`)
+Step 2: Disable the Nouveau drivers
+
+_ Create a file at /etc/modprobe.d/blacklist-nouveau.conf with the following contents:
+```cfg
+blacklist nouveau
+options nouveau modeset=0
+```
+_ Regenerate the kernel initramfs:
+```sh
+sudo dracut --force
+```
+
+Step 3: Go to the directory which contains downloaded drivers & run the *.run file (with options if necessary. Ex: `--dkms`)
 ```sh
 sudo ./<driver_file>.run
 ```
