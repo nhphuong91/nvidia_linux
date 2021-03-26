@@ -71,6 +71,27 @@ Same as [runfile](#Method-1-(runfile)) on Ubuntu
 Follow instruction on download page
 ![Cuda toolkit download page](../images/cuda_toolkit5.png)
 
+**NOTE:** Remove `nvidia-driver-latest-dkms` since driver has been installed
+
 ### Method 3 (using pakage manager online)
 Follow instruction on download page
 ![Cuda toolkit download page](../images/cuda_toolkit6.png)
+
+**NOTE:** Remove `nvidia-driver-latest-dkms` since driver has been installed
+
+### Post-installation steps
+#### Configure symlink for cuda toolkit version
+Same as [ubuntu version](#Configure-symlink-for-cuda-toolkit-version)
+
+#### Configure PATH
+Add file `<cuda_PATH_conf>.sh` to /etc/profile.d/ with below content
+![Cuda toolkit directory](../images/cuda_toolkit3.png)
+```sh
+if [ -d "/usr/local/cuda/bin/" ]; then
+    pathmunge /usr/local/cuda/bin
+    pathmunge /usr/local/cuda/nsight-compute-<version>
+fi
+```
+
+#### Configure LD_LIBRARY_PATH
+Same as [ubuntu version](#Configure-LD_LIBRARY_PATH)
