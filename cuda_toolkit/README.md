@@ -38,24 +38,24 @@ Follow instruction on download page
 Follow instruction on download page
 ![Cuda toolkit download page](../images/cuda_toolkit2.png)
 
-## Post-installation steps
-### Configure symlink for cuda toolkit version
+### Post-installation steps
+#### Configure symlink for cuda toolkit version
 Create symlink from `/usr/local/cuda` to `/usr/local/cuda-<version>` (rm existing symlink cuda if necessary)
 ```sh
 sudo ln -s /usr/local/cuda-<version> /usr/local/cuda
 ```
 **NOTE:** This is also used for switching between version of cuda toolkit
 
-### Configure PATH
-Modify & add these lines to `~/.bashrc` or `~/.profile` & restart terminal/OS
+#### Configure PATH
+Modify & add these lines accordingly to `~/.bashrc` or `~/.profile` & restart terminal/OS
 ![Cuda toolkit directory](../images/cuda_toolkit3.png)
 ```sh
 if [ -d "/usr/local/cuda/bin/" ]; then
     export PATH=/usr/local/cuda/bin:/usr/local/cuda/nsight-compute-<version>${PATH:+:${PATH}}
 fi
 ```
-### Configure LD_LIBRARY_PATH
-add `/usr/local/cuda/lib64` to `/etc/ld.so.conf.d/<cuda_config>.conf` file and run `ldconfig` as root
+#### Configure LD_LIBRARY_PATH
+Add `/usr/local/cuda/lib64` to `/etc/ld.so.conf.d/<cuda_config>.conf` file and run `ldconfig` as root
 ```sh
 sudo bash -c "echo /usr/local/cuda/lib64 > /etc/ld.so.conf.d/cuda.conf"
 sudo ldconfig
@@ -63,7 +63,12 @@ sudo ldconfig
 
 ## CentOS 7
 ### Method 1 (runfile)
+Same as [runfile](#Method-1-(runfile)) on Ubuntu
 
 ### Method 2 (using pakage manager offline)
+Follow instruction on download page
+![Cuda toolkit download page](../images/cuda_toolkit5.png)
 
 ### Method 3 (using pakage manager online)
+Follow instruction on download page
+![Cuda toolkit download page](../images/cuda_toolkit6.png)
