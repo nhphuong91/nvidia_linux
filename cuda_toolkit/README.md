@@ -14,9 +14,11 @@ Step 2: Check for maximum supported cuda toolkit version according to installed 
 ```sh
 nvidia-smi
 ```
-Ex:
+> Ex:
+
 ![nvidia-smi](../images/nvidia_smi.png)
-=> any cuda toolkit version <= 11.2 is compatiple with current system
+
+> any cuda toolkit version <= 11.2 is compatiple with current system
 
 ## Ubuntu 18.04
 ### Method 1 (runfile)
