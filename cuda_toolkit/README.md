@@ -1,7 +1,9 @@
 # How to install nvidia CUDA Toolkit on Linux system
-Source https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html
+Source: https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html
 
-Download http://developer.nvidia.com/cuda-downloads
+All version doc: https://developer.nvidia.com/cuda-toolkit-archive
+
+Download: http://developer.nvidia.com/cuda-downloads
 
 > **_NOTE 1:_** this guide is best for installing from fresh (no previous installation) & support install multiple version of cuda toolkit
 

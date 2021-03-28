@@ -1,7 +1,9 @@
 # How to install nvidia CUDNN on Linux system
-> This guide only follow guideline for installation using *.tar file
+> This guide only follow guideline for installation using tar file
 
 Source: https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html
+
+All versions: https://docs.nvidia.com/deeplearning/cudnn/archives/index.html
 
 Download: https://developer.nvidia.com/rdp/cudnn-download
 
@@ -11,7 +13,9 @@ https://developer.nvidia.com/rdp/cudnn-archive
 
 ## For both Ubuntu & CentOS
 ### Download & extract tar file
-__Step 1:__ Go to download page & download cudnn version which is compatible with installed cuda toolkit version
+__Step 1:__ Go to download page & download cudnn version which is compatible with targeted TensorRT & installed cuda toolkit version
+
+> **Hint:** Go to installation document of [TensorRT](../tensorRT) & look for dependencies list
 
 ![cudnn download](../images/cudnn0.png)
 
