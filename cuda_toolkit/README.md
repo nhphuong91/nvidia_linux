@@ -95,3 +95,17 @@ fi
 
 #### Configure LD_LIBRARY_PATH
 Same as [ubuntu version](#Configure-LD_LIBRARY_PATH)
+
+## Checking installation
+Run below command to check for installed & running version:
+
+```sh
+nvcc --version
+```
+![Cuda toolkit check](../images/cuda_toolkit7.png)
+
+```sh
+ll /usr/local/
+```
+![Cuda toolkit check](../images/cuda_toolkit8.png)
+> A symlink created to re-direct any access to cuda to current in-use version
