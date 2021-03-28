@@ -3,9 +3,9 @@ Source https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html
 
 Download http://developer.nvidia.com/cuda-downloads
 
-**NOTE 1:** this guide is best for installing from fresh (no previous installation) & support install multiple version of cuda toolkit
+> **_NOTE 1:_** this guide is best for installing from fresh (no previous installation) & support install multiple version of cuda toolkit
 
-**NOTE 2:** we can install multiple version of cuda toolkit on the same system but can only run one of them at a time. A tip for switching between different versions is mentioned below
+> **_NOTE 2:_** we can install multiple version of cuda toolkit on the same system but can only run one of them at a time. A tip for switching between different versions is mentioned below
 
 ## Pre-installation steps
 Step 1: [Install nvidia driver](../driver)
@@ -22,11 +22,11 @@ nvidia-smi
 
 ## Ubuntu 18.04
 ### Method 1 (runfile)
-Step 1: Download cuda toolkit runfile (version according to above pre-installation steps) from nvidia websites
+__Step 1:__ Download cuda toolkit runfile (version according to above pre-installation steps) from nvidia websites
 
-Step 2: Go to download folder & run the installation file
+__Step 2:__ Go to download folder & run the installation file
 
-**NOTE**: Remember to exclude driver installation included in the runfile
+> **_NOTE_**: Remember to exclude driver installation included in the runfile
 ```sh
 sudo sh <runfile>.run
 ```
@@ -46,7 +46,7 @@ Create symlink from `/usr/local/cuda` to `/usr/local/cuda-<version>` (rm existin
 ```sh
 sudo ln -s /usr/local/cuda-<version> /usr/local/cuda
 ```
-**NOTE:** This is also used for switching between version of cuda toolkit
+> **_NOTE:_** This is also used for switching between version of cuda toolkit
 
 #### Configure PATH
 Modify & add these lines accordingly to `~/.bashrc` or `~/.profile` & restart terminal/OS
@@ -71,13 +71,13 @@ Same as [runfile](#Method-1-(runfile)) on Ubuntu
 Follow instruction on download page
 ![Cuda toolkit download page](../images/cuda_toolkit5.png)
 
-**NOTE:** Remove `nvidia-driver-latest-dkms` since driver has been installed
+> **_NOTE:_** Remove `nvidia-driver-latest-dkms` since driver has been installed
 
 ### Method 3 (using pakage manager online)
 Follow instruction on download page
 ![Cuda toolkit download page](../images/cuda_toolkit6.png)
 
-**NOTE:** Remove `nvidia-driver-latest-dkms` since driver has been installed
+> **_NOTE:_** Remove `nvidia-driver-latest-dkms` since driver has been installed
 
 ### Post-installation steps
 #### Configure symlink for cuda toolkit version

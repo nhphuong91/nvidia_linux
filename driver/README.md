@@ -14,13 +14,13 @@ Select available driver from Software & Updates application
 ![Softwares & Updates](../images/softwares_n_updates.png)
 
 ### Method 2 (using pakage manager)
-Step 1: List out all available nvidia drivers
+__Step 1:__ List out all available nvidia drivers
 ```sh
 sudo apt update
 sudo apt list nvidia-driver-*
 ```
 
-Step 2: Choose one of the list of available drivers & install
+__Step 2:__ Choose one of the list of available drivers & install
 ![Driver list](../images/cmdl_nvidia_driver.png)
 ```sh
 sudo apt install nvidia-driver-<branch>
@@ -28,7 +28,7 @@ sudo apt install nvidia-driver-<branch>
 
 ### Method 3 (manually)
 #### Pre-installation Actions
-Step 1: Disable the Nouveau drivers
+__Step 1:__ Disable the Nouveau drivers
 
 _ Create a file at /etc/modprobe.d/blacklist-nouveau.conf with the following contents:
 ```cfg
@@ -45,19 +45,19 @@ _ Regenerate the kernel initramfs:
 sudo update-initramfs -u
 ```
 
-Step 2: Download & Calculate the MD5 checksum of the downloaded file
+__Step 2:__ Download & Calculate the MD5 checksum of the downloaded file
 
 ```sh
 md5sum <file>
 ```
 
-Step 3: Install kernel headers & necessary packages
+__Step 3:__ Install kernel headers & necessary packages
 
 ```sh
 sudo apt install linux-headers-$(uname -r) libglvnd-dev pkg-config dkms
 ```
 
-Step 4: Uninstall old installation
+__Step 4:__ Uninstall old installation
 
 Depend on the way the previous nvidia driver was installed, unistall it using one of below methods:
 
@@ -72,28 +72,28 @@ sudo ./<driver_file>.run --uninstall
 ```
 
 #### Installation steps
-Step 1: Reboot and login to virtual console (tty) by pressing `ctrl + alt + F2/.../F6`
+__Step 1:__ Reboot and login to virtual console (tty) by pressing `ctrl + alt + F2/.../F6`
 
-Step 2: Go to the directory which contains downloaded drivers & run the *.run file (with options if necessary. Ex: `--dkms`)
+__Step 2:__ Go to the directory which contains downloaded drivers & run the *.run file (with options if necessary. Ex: `--dkms`)
 ```sh
 sudo ./<driver_file>.run --dkms
 ```
 
-**Note:** See [here](https://github.com/nhphuong91/Linux/blob/master/nvidiaDriverInstallation/OptionToInstallNvidiaDriver.txt) for list of avalable options
+> **_NOTE:_** See [here](https://github.com/nhphuong91/Linux/blob/master/nvidiaDriverInstallation/OptionToInstallNvidiaDriver.txt) for list of avalable options
 
 ## CentOS 7
 ### Pre-installation Actions
-Step 1: Install necessary packages
+__Step 1:__ Install necessary packages
 ```sh
 sudo dnf install -y tar bzip2 make automake gcc gcc-c++ pciutils elfutils-libelf-devel libglvnd-devel iptables firewalld vim bind-utils wget
 ```
 
-Step 2: Install kernel headers
+__Step 2:__ Install kernel headers
 ```sh
 sudo yum install kernel-devel-$(uname -r) kernel-headers-$(uname -r)
 ```
 
-Step 3: Uninstall old installation
+__Step 3:__ Uninstall old installation
 
 Depend on the way the previous nvidia driver was installed, unistall it using one of below methods:
 
@@ -108,31 +108,31 @@ sudo ./<driver_file>.run --uninstall
 ```
 
 ### Method 1 (using pakage manager)
-Step 1: Satisfy the external dependency on EPEL for DKMS
+__Step 1:__ Satisfy the external dependency on EPEL for DKMS
 ```sh
 sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 ```
 
-Step 2: Install the CUDA repository public GPG key
+__Step 2:__ Install the CUDA repository public GPG key
 ```sh
 distribution=rhel7
 ARCH=$( /bin/arch )
 sudo yum-config-manager --add-repo http://developer.download.nvidia.com/compute/cuda/repos/$distribution/${ARCH}/cuda-$distribution.repo
 ```
 
-Step 3: Update the repository cache and install the driver using the nvidia-driver-latest-dkms meta-package
+__Step 3:__ Update the repository cache and install the driver using the nvidia-driver-latest-dkms meta-package
 ```sh
 sudo yum clean expire-cache
 sudo yum install -y nvidia-driver-latest-dkms
 ```
 
 ### Method 2 (manually)
-Step 1: Download & Calculate the MD5 checksum of the downloaded file
+__Step 1:__ Download & Calculate the MD5 checksum of the downloaded file
 ```sh
 md5sum <driver_file>
 ```
 
-Step 2: Disable the Nouveau drivers
+__Step 2:__ Disable the Nouveau drivers
 
 _ Create a file at /etc/modprobe.d/blacklist-nouveau.conf with the following contents:
 ```cfg
@@ -144,7 +144,7 @@ _ Regenerate the kernel initramfs:
 sudo dracut --force
 ```
 
-Step 3: Go to the directory which contains downloaded drivers & run the *.run file (with options if necessary. Ex: `--dkms`)
+__Step 3:__ Go to the directory which contains downloaded drivers & run the *.run file (with options if necessary. Ex: `--dkms`)
 ```sh
 sudo ./<driver_file>.run
 ```
