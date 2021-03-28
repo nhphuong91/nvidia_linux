@@ -1,6 +1,8 @@
 # How to install nvidia driver on Linux system
 Source https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#driver-installation
+
 &
+
 https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html
 
 Download https://www.nvidia.com/Download/index.aspx
