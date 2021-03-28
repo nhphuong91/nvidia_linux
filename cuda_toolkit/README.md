@@ -8,9 +8,9 @@ Download http://developer.nvidia.com/cuda-downloads
 > **_NOTE 2:_** we can install multiple version of cuda toolkit on the same system but can only run one of them at a time. A tip for switching between different versions is mentioned below
 
 ## Pre-installation steps
-Step 1: [Install nvidia driver](../driver)
+__Step 1:__ [Install nvidia driver](../driver)
 
-Step 2: Check for maximum supported cuda toolkit version according to installed driver
+__Step 2:__ Check for maximum supported cuda toolkit version according to installed driver
 ```sh
 nvidia-smi
 ```
@@ -42,7 +42,7 @@ Follow instruction on download page
 
 ### Post-installation steps
 #### Configure symlink for cuda toolkit version
-Create symlink from `/usr/local/cuda` to `/usr/local/cuda-<version>` (rm existing symlink cuda if necessary)
+Create symlink from `/usr/local/cuda` to `/usr/local/cuda-<version>` (remove existing cuda symlink if necessary)
 ```sh
 sudo ln -s /usr/local/cuda-<version> /usr/local/cuda
 ```
