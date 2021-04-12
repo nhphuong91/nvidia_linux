@@ -43,9 +43,9 @@ ln -s TensorRT-<version> TensorRT
 > **_NOTE:_** The method for switching between multiple version of TensorRT is the same as cuda toolkit -> modify symlink file
 
 ### Add TensorRT to LD_LIBRARY_PATH
-Add `<TensorRT-${version}/lib` to `/etc/ld.so.conf.d/<trt_config>.conf` file and run `ldconfig` as root
+Add `TensorRT/lib` to `/etc/ld.so.conf.d/<trt_config>.conf` file and run `ldconfig` as root
 ```sh
-sudo bash -c "echo /home/<user>/packages/<TensorRT-${version}/lib > /etc/ld.so.conf.d/trt_config.conf"
+sudo bash -c "echo /home/<user>/packages/TensorRT/lib > /etc/ld.so.conf.d/trt_config.conf"
 sudo ldconfig
 ```
 
