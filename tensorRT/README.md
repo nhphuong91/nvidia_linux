@@ -25,9 +25,9 @@ Extracted content is stored in folder `TensorRT-<version>`
 
 ### Setup TensorRT permanent directory
 
-__Step 1:__ Create directory to store multiple version of tensorRT
+__Step 1:__ Create directory to store multiple version of tensorRT (& other pkgs) in root directory
 ```sh
-cd ~
+cd /
 mkdir packages && cd packages
 ```
 
@@ -45,7 +45,7 @@ ln -s TensorRT-<version> TensorRT
 ### Add TensorRT to LD_LIBRARY_PATH
 Add `TensorRT/lib` to `/etc/ld.so.conf.d/<trt_config>.conf` file and run `ldconfig` as root
 ```sh
-sudo bash -c "echo /home/<user>/packages/TensorRT/lib > /etc/ld.so.conf.d/trt_config.conf"
+sudo bash -c "echo /packages/TensorRT/lib > /etc/ld.so.conf.d/trt_config.conf"
 sudo ldconfig
 ```
 
