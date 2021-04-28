@@ -51,8 +51,9 @@ sudo ln -s /usr/local/cuda-<version> /usr/local/cuda
 > **_NOTE:_** This is also used for switching between version of cuda toolkit
 
 #### Configure PATH
-Modify & add these lines accordingly to `~/.bashrc` or `~/.profile` & restart terminal/OS
+Check the name of `nsight-compute` in cuda toolkit installed directory
 ![Cuda toolkit directory](../images/cuda_toolkit3.png)
+Modify & add these lines accordingly to `~/.bashrc` or `~/.profile` (for local users) or `/etc/profile` (for system-wide users) & restart terminal/OS
 ```sh
 if [ -d "/usr/local/cuda/bin/" ]; then
     export PATH=/usr/local/cuda/bin:/usr/local/cuda/nsight-compute-<version>${PATH:+:${PATH}}
