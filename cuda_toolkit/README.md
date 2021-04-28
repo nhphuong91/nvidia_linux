@@ -53,6 +53,7 @@ sudo ln -s /usr/local/cuda-<version> /usr/local/cuda
 #### Configure PATH
 Check the name of `nsight-compute` in cuda toolkit installed directory
 ![Cuda toolkit directory](../images/cuda_toolkit3.png)
+
 Modify & add these lines accordingly to `~/.bashrc` or `~/.profile` (for local users) or `/etc/profile` (for system-wide users) & restart terminal/OS
 ```sh
 if [ -d "/usr/local/cuda/bin/" ]; then
