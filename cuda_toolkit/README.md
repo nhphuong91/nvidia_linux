@@ -9,6 +9,26 @@ Download: http://developer.nvidia.com/cuda-downloads
 
 > **_NOTE 2:_** we can install multiple version of cuda toolkit on the same system but can only run one of them at a time. A tip for switching between different versions is mentioned below
 
+## Table of contents
+- [Pre-installation steps](#Pre-installation-steps)
+- [Ubuntu 18.04](#Ubuntu-18.04)
+    - [Method 1 (runfile)](#Method-1-(runfile))
+    - [Method 2 (using pakage manager offline)](#Method-2-(using-pakage-manager-offline))
+    - [Method 3 (using pakage manager online)](#Method-3-(using-pakage-manager-online))
+    - [Post-installation steps](#Post-installation-steps)
+        - [Configure symlink for cuda toolkit version](#Configure-symlink-for-cuda-toolkit-version)
+        - [Configure PATH](#Configure-PATH)
+        - [Configure LD_LIBRARY_PATH](#Configure-LD_LIBRARY_PATH)
+- [CentOS 7](#CentOS-7)
+    - [Method 1 (runfile)](#Method-1-(runfile)-1)
+    - [Method 2 (using pakage manager offline)](#Method-2-(using-pakage-manager-offline)-1)
+    - [Method 3 (using pakage manager online)](#Method-3-(using-pakage-manager-online)-1)
+    - [Post-installation steps](#Post-installation-steps-1)
+        - [Configure symlink for cuda toolkit version](#Configure-symlink-for-cuda-toolkit-version-1)
+        - [Configure PATH](#Configure-PATH-1)
+        - [Configure LD_LIBRARY_PATH](#Configure-LD_LIBRARY_PATH-1)
+- [Checking installation](#Checking-installation)
+
 ## Pre-installation steps
 __Step 1:__ [Install nvidia driver](../driver)
 

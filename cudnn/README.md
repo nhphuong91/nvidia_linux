@@ -11,8 +11,8 @@ or
 
 https://developer.nvidia.com/rdp/cudnn-archive
 
-## For both Ubuntu & CentOS
-### Download & extract tar file
+> **_NOTE:_** Below steps are the same for both Ubuntu & CentOS
+
 __Step 1:__ Go to download page & download cudnn version which is compatible with targeted TensorRT & installed cuda toolkit version
 
 > **Hint:** Go to installation document of [TensorRT](../tensorRT) & look for dependencies list

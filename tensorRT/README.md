@@ -8,8 +8,15 @@ All version: https://docs.nvidia.com/deeplearning/tensorrt/archives/index.html
 
 Download: https://developer.nvidia.com/nvidia-tensorrt-download
 
-## For both Ubuntu & CentOS
-### Download & extract tar file
+> **_NOTE:_** Below steps are the same for both Ubuntu & CentOS
+
+## Table of contents
+- [Download & extract tar file](#Download-&-extract-tar-file)
+- [Setup TensorRT permanent directory](#Setup-TensorRT-permanent-directory)
+- [Add TensorRT to LD_LIBRARY_PATH](#Add-TensorRT-to-LD_LIBRARY_PATH)
+- [Install tensorRT pre-built python modules](#Install-tensorRT-pre-built-python-modules)
+
+## Download & extract tar file
 __Step 1:__ Go to download page & download TensorRT version which is compatible with installed cuda toolkit version
 
 ![cudnn download](../images/tensorRT0.png)
@@ -23,7 +30,7 @@ tar xzvf <tensorRT tar file>.tar.gz
 
 Extracted content is stored in folder `TensorRT-<version>`
 
-### Setup TensorRT permanent directory
+## Setup TensorRT permanent directory
 
 __Step 1:__ Create directory to store multiple version of tensorRT (& other pkgs) in root directory
 ```sh
@@ -42,14 +49,14 @@ ln -s TensorRT-<version> TensorRT
 ```
 > **_NOTE:_** The method for switching between multiple version of TensorRT is the same as cuda toolkit -> modify symlink file
 
-### Add TensorRT to LD_LIBRARY_PATH
+## Add TensorRT to LD_LIBRARY_PATH
 Add `TensorRT/lib` to `/etc/ld.so.conf.d/<trt_config>.conf` file and run `ldconfig` as root
 ```sh
 sudo bash -c "echo /packages/TensorRT/lib > /etc/ld.so.conf.d/trt_config.conf"
 sudo ldconfig
 ```
 
-### Install tensorRT pre-built python modules
+## Install tensorRT pre-built python modules
 
 Go to below sub-folders to install pre-built python module (in accordance with python version)
 ```sh
