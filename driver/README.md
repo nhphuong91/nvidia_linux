@@ -11,15 +11,15 @@ Download: https://www.nvidia.com/Download/index.aspx
 
 ## Table of contents
 - [Ubuntu 18.04](#Ubuntu-18.04)
-    - [Method 1 (easiest)](#Method-1-(easiest))
-    - [Method 2 (using pakage manager)](#Method-2-(using-pakage-manager))
-    - [Method 3 (manually)](#Method-3-(manually))
+    - [Method 1 (easiest)](#Method-1-easiest)
+    - [Method 2 (using pakage manager)](#Method-2-using-pakage-manager)
+    - [Method 3 (manually)](#Method-3-manually)
         - [Pre-installation Actions](#Pre-installation-Actions)
         - [Installation steps](#Installation-steps)
 - [CentOS 7](#CentOS-7)
     - [Pre-installation Actions](#Pre-installation-Actions)
-    - [Method 1 (using pakage manager)](#Method-1-(using-pakage-manager))
-    - [Method 2 (manually)](#Method-2-(manually))
+    - [Method 1 (using pakage manager)](#Method-1-using-pakage-manager)
+    - [Method 2 (manually)](#Method-2-manually)
 
 ## Ubuntu 18.04
 ### Method 1 (easiest)
