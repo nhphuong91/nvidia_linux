@@ -162,3 +162,11 @@ __Step 3:__ Go to the directory which contains downloaded drivers & run the *.ru
 ```sh
 sudo ./<driver_file>.run
 ```
+
+## NOTES
+For notebook, to utilize nvidia GPU for all graphic applications, remember to change PRIME profiles to `NVIDIA (Performance Mode)`
+<p align="center">
+    <img src="https://i.stack.imgur.com/9OygS.png" width="600">
+</p>
+
+Alternative method is cmd `sudo prime-select (nvidia|intel|on-demand|query)`
