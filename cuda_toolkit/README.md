@@ -86,6 +86,7 @@ Add `/usr/local/cuda/lib64` to `/etc/ld.so.conf.d/<cuda_config>.conf` file and r
 sudo bash -c "echo /usr/local/cuda/lib64 > /etc/ld.so.conf.d/cuda.conf"
 sudo ldconfig
 ```
+> **_NOTE:_** Later version of cuda toolkit installer has done this so no need to (`/etc/ld.so.conf.d/cuda-11-4.conf`)
 
 ## CentOS 7
 ### Method 1 (runfile)
