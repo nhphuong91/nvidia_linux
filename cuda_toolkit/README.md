@@ -86,7 +86,7 @@ Add `/usr/local/cuda/lib64` to `/etc/ld.so.conf.d/<cuda_config>.conf` file and r
 sudo bash -c "echo /usr/local/cuda/lib64 > /etc/ld.so.conf.d/cuda.conf"
 sudo ldconfig
 ```
-> **_NOTE:_** Later version of cuda toolkit installer has done this so no need to (`/etc/ld.so.conf.d/cuda-11-4.conf`)
+> **_NOTE:_** Later version of cuda toolkit installer has done this so no need to (`/etc/ld.so.conf.d/cuda-<version>.conf`)
 
 ## CentOS 7
 ### Method 1 (runfile)
@@ -134,3 +134,8 @@ ll /usr/local/
 ```
 ![Cuda toolkit check](../images/cuda_toolkit8.png)
 > A symlink created to re-direct any access to cuda to current in-use version
+
+# Uninstall
+To uninstall, take reference from installation guide in accordance with your installation method.
+
+For unintall tar file method, if uninstaller file not exist, go to release section of this repo & download it from there.
