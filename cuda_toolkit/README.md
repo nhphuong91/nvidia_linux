@@ -31,6 +31,7 @@ Download: http://developer.nvidia.com/cuda-downloads
 
 ## Pre-installation steps
 __Step 1:__ [Install nvidia driver](../driver)
+> **_NOTE_**: For choosing nvidia driver according to target cuda toolkit version, refer to [cuda toolkit release notes - Table 3. CUDA Toolkit and Corresponding Driver Versions](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html)
 
 __Step 2:__ Check for maximum supported cuda toolkit version according to installed driver
 ```sh
