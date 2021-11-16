@@ -93,7 +93,9 @@ __Step 2:__ Go to the directory which contains downloaded drivers & run the *.ru
 sudo ./<driver_file>.run --dkms
 ```
 
-> **_NOTE:_** See [here](https://github.com/nhphuong91/Linux/blob/master/nvidiaDriverInstallation/OptionToInstallNvidiaDriver.txt) for list of avalable options
+> **_NOTE:_** See [here](./OptionToInstallNvidiaDriver.txt) for list of avalable options
+
+> **_NOTE:_** For more instruction from nvidia, see [here](./READMEtext.txt)
 
 ## CentOS 7
 ### Pre-installation Actions
