@@ -1,5 +1,5 @@
 # How to install nvidia driver on Linux system
-Source: https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#driver-installation
+Source: https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#network-repo-installation-for-ubuntu
 
 &
 
@@ -28,16 +28,23 @@ Select available driver from Software & Updates application
 ![Softwares & Updates](../images/softwares_n_updates.png)
 
 ### Method 2 (using pakage manager)
-__Step 1:__ List out all available nvidia drivers
+__Step 1:__ Add nvidia keyring & apt repo
+```sh
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-keyring_1.0-1_all.deb
+sudo dpkg -i cuda-keyring_1.0-1_all.deb
+sudo apt-get update
+```
+
+__Step 2:__ List out all available nvidia drivers
 ```sh
 sudo apt update
 sudo apt list nvidia-driver-*
 ```
 
-__Step 2:__ Choose one of the list of available drivers & install
+__Step 3:__ Choose one of the list of available drivers & install
 ![Driver list](../images/cmdl_nvidia_driver.png)
 ```sh
-sudo apt install nvidia-driver-<branch>
+sudo apt install nvidia-driver-<version>
 ```
 
 ### Method 3 (manually)
