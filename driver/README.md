@@ -47,6 +47,12 @@ __Step 3:__ Choose one of the list of available drivers & install
 sudo apt install nvidia-driver-<version>
 ```
 
+__Step 3*:__ Alternative choice is to _"install all NVIDIA proprietary kernel modules Driver packages. Handles upgrading to the next version of the Driver packages when they are released."_
+![Driver options](../images/nvidia_driver_option.png)
+```sh
+sudo apt install cuda-drivers
+```
+
 ### Method 3 (manually)
 #### Pre-installation Actions
 __Step 1:__ Disable the Nouveau drivers
@@ -157,7 +163,7 @@ md5sum <driver_file>
 
 __Step 2:__ Disable the Nouveau drivers
 
-_ Create a file at /etc/modprobe.d/blacklist-nouveau.conf with the following contents:
+_ Create a file at `/etc/modprobe.d/blacklist-nouveau.conf` with the following contents:
 ```cfg
 blacklist nouveau
 options nouveau modeset=0
